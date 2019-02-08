@@ -30,8 +30,8 @@ from .util import bfh, bh2u
 from .crypto import PoWHash
 
 MAX_TARGET = 0x00000FFFFF000000000000000000000000000000000000000000000000000000
-POW_TARGET_SPACING = int(2.5 * 60)  # Dash: 2.5 minutes
-POW_DGW3_HEIGHT = 68589
+POW_TARGET_SPACING = int(2 * 60)  # Pion: 2 minutes
+POW_DGW3_HEIGHT = 24 # For Pion, DGW starts at block 0, but we need a minimum of 24 past blocks to start calculating DGW3
 DGW_PAST_BLOCKS = 24
 
 

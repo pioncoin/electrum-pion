@@ -1,14 +1,8 @@
 {
-    "electrum.dash.siampm.com": {
+    "us.electrum.pioncoin.org": {
         "pruning": "-",
         "s": "50002",
         "t": "50001",
         "version": "1.2"
-    },
-    "drk.p2pay.com": {
-        "pruning": "-",
-        "s": "50002",
-        "t": "50001",
-        "version": "1.2"
-     }
+    }
 }

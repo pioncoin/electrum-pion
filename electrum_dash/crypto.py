@@ -32,7 +32,7 @@ import pyaes
 
 from .util import assert_bytes, InvalidPassword, to_bytes, to_string
 from .util import print_stderr
-from .x11hash import getPoWHash
+from x16r_hash import getPoWHash
 
 
 try:

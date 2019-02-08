@@ -40,10 +40,10 @@ def read_json(filename, default):
 class BitcoinMainnet:
 
     TESTNET = False
-    WIF_PREFIX = 204
-    ADDRTYPE_P2PKH = 76
-    ADDRTYPE_P2SH = 16
-    GENESIS = "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6"
+    WIF_PREFIX = 245
+    ADDRTYPE_P2PKH = 55
+    ADDRTYPE_P2SH = 48
+    GENESIS = "000009c77e1208a736b8289762416db2472b644e35fe8341104e1de218673a0d"
     DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     DEFAULT_SERVERS = read_json('servers.json', {})
     CHECKPOINTS = read_json('checkpoints.json', [])
@@ -56,11 +56,11 @@ class BitcoinMainnet:
     }
     DRKV_HEADER = 0x02fe52f8  # drkv
     DRKP_HEADER = 0x02fe52cc  # drkp
-    BIP44_COIN_TYPE = 5
+    BIP44_COIN_TYPE = 261
 
 
 class BitcoinTestnet:
-
+    # TODO: update these for PionRestNet
     TESTNET = True
     WIF_PREFIX = 239
     ADDRTYPE_P2PKH = 140

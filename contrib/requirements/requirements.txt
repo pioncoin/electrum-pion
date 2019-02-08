@@ -8,4 +8,4 @@ jsonrpclib-pelix
 PySocks>=1.6.6
 typing>=3.0.0
 pycryptodomex
-x11_hash
+x16r_hash==1.0.1
