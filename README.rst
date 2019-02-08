@@ -1,16 +1,15 @@
-Dash Electrum - Lightweight Dashpay client
+Pion Electrum - Lightweight pion client
 =====================================
 
 ::
 
   Licence: MIT Licence
-  Author: Thomas Voegtlin
+  Author: Pioncore
   Language: Python
-  Homepage: https://electrum.dash.org/
 
 
-.. image:: https://travis-ci.org/akhavr/electrum-dash.svg?branch=master
-    :target: https://travis-ci.org/akhavr/electrum-dash
+.. image:: https://travis-ci.org/pioncoin/electrum-pion.svg?branch=master
+    :target: https://travis-ci.org/pioncoin/electrum-pion
     :alt: Build Status
 
 
@@ -21,14 +20,14 @@ Getting started
 ===============
 
 
-Use PPA setup
+[WIP] Use PPA setup 
 -------------
 
 On Ubuntu/Linux Mint you can try to install Dash Electrum with next commands::
 
-    sudo add-apt-repository ppa:akhavr/dash-electrum
+    sudo add-apt-repository ppa:pioncoin/pion-electrum
     sudo apt-get update
-    sudo apt-get install dash-electrum
+    sudo apt-get install pion-electrum
 
 
 Use source distribution
@@ -42,11 +41,11 @@ Qt interface, install the Qt dependencies::
 If you downloaded the official package (tar.gz), you can run
 Dash Electrum from its root directory, without installing it on your
 system; all the python dependencies are included in the 'packages'
-directory (except x11-hash).
+directory (except x16r-hash).
 
-To install x11-hash dependency in the 'packages' dir run once::
+To install x16r-hash dependency in the 'packages' dir run once::
 
-    pip3 install -t packages x11-hash
+    pip3 install -t packages x16r-hash
 
 To run Dash Electrum from its root directory, just do::
 
@@ -81,13 +80,13 @@ To use Tor Proxy on Ubuntu set it up with::
 
 Other platforms setup is described at `docs/tor.md <docs/tor.md>`_
 
-Development version
+Development version [linux only]
 ===================
 
 Check out the code from GitHub::
 
-    git clone https://github.com/akhavr/electrum-dash.git
-    cd electrum-dash
+    git clone https://github.com/pioncoin/electrum-pion.git
+    cd electrum-pion
 
 Run install (this should install dependencies)::
 
@@ -115,7 +114,7 @@ Create translations (optional)::
 
 
 
-Creating Binaries
+Creating Binaries [ linux only ]
 =================
 
 
