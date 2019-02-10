@@ -10,7 +10,7 @@ cd build
 
 brew update
 brew tap zebra-lucky/qt5
-brew install zebra-lucky/qt5/qt5
+brew install zebra-lucky/qt5/qt
 brew install gettext
 brew upgrade gmp
 
