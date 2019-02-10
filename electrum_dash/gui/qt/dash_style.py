@@ -1,4 +1,4 @@
-"""Dash look and feel."""
+"""Pion look and feel."""
 
 dash_stylesheet = """
 

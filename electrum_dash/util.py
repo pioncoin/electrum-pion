@@ -592,16 +592,14 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 mainnet_block_explorers = {
-    'Dash.org': ('https://explorer.dash.org/',
+    'Pioncoin.org': ('http://explorer.pioncoin.org/',
                        {'tx': 'tx/', 'addr': 'address/'}),
-    'Bchain.info': ('https://bchain.info/DASH/',
-                       {'tx': 'tx/', 'addr': 'addr/'}),
     'system default': ('blockchain:/',
                        {'tx': 'tx/', 'addr': 'address/'}),
 }
 
 testnet_block_explorers = {
-    'Dash.org': ('https://testnet-insight.dashevo.org/insight/',
+    'Pion.org': ('https://https://pool.plumcoin.tech/explorer/',
                        {'tx': 'tx/', 'addr': 'address/'}),
     'system default': ('blockchain:/',
                        {'tx': 'tx/', 'addr': 'address/'}),
@@ -612,7 +610,7 @@ def block_explorer_info():
     return testnet_block_explorers if constants.net.TESTNET else mainnet_block_explorers
 
 def block_explorer(config):
-    return config.get('block_explorer', 'Dash.org')
+    return config.get('block_explorer', 'Pion.org')
 
 def block_explorer_tuple(config):
     return block_explorer_info().get(block_explorer(config))
@@ -637,12 +635,12 @@ def parse_URI(uri, on_pr=None):
 
     if ':' not in uri:
         if not bitcoin.is_address(uri):
-            raise Exception("Not a Dash address")
+            raise Exception("Not a Pion address")
         return {'address': uri}
 
     u = urllib.parse.urlparse(uri)
-    if u.scheme != 'dash':
-        raise Exception("Not a Dash URI")
+    if u.scheme != 'pion':
+        raise Exception("Not a Pion URI")
     address = u.path
 
     # python for android fails to parse query
@@ -659,7 +657,7 @@ def parse_URI(uri, on_pr=None):
     out = {k: v[0] for k, v in pq.items()}
     if address:
         if not bitcoin.is_address(address):
-            raise Exception("Invalid Dash address:" + address)
+            raise Exception("Invalid Pion address:" + address)
         out['address'] = address
     if 'amount' in out:
         am = out['amount']
@@ -709,7 +707,7 @@ def create_URI(addr, amount, message):
         query.append('amount=%s'%format_satoshis_plain(amount))
     if message:
         query.append('message=%s'%urllib.parse.quote(message))
-    p = urllib.parse.ParseResult(scheme='dash', netloc='', path=addr, params='', query='&'.join(query), fragment='')
+    p = urllib.parse.ParseResult(scheme='pion', netloc='', path=addr, params='', query='&'.join(query), fragment='')
     return urllib.parse.urlunparse(p)
 
 

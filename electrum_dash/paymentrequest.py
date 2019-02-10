@@ -45,8 +45,8 @@ from .util import export_meta, import_meta
 from .bitcoin import TYPE_ADDRESS
 from .transaction import TxOutput
 
-REQUEST_HEADERS = {'Accept': 'application/dash-paymentrequest', 'User-Agent': 'Dash-Electrum'}
-ACK_HEADERS = {'Content-Type':'application/dash-payment','Accept':'application/dash-paymentack','User-Agent':'Dash-Electrum'}
+REQUEST_HEADERS = {'Accept': 'application/dash-paymentrequest', 'User-Agent': 'Pion-Electrum'}
+ACK_HEADERS = {'Content-Type':'application/dash-payment','Accept':'application/dash-paymentack','User-Agent':'Pion-Electrum'}
 
 ca_path = requests.certs.where()
 ca_list = None

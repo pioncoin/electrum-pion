@@ -23,7 +23,7 @@ Getting started
 [WIP] Use PPA setup 
 -------------
 
-On Ubuntu/Linux Mint you can try to install Dash Electrum with next commands::
+On Ubuntu/Linux Mint you can try to install Pion Electrum with next commands::
 
     sudo add-apt-repository ppa:pioncoin/pion-electrum
     sudo apt-get update
@@ -33,13 +33,13 @@ On Ubuntu/Linux Mint you can try to install Dash Electrum with next commands::
 Use source distribution
 -----------------------
 
-Dash Electrum is a pure python application. If you want to use the
+Pion Electrum is a pure python application. If you want to use the
 Qt interface, install the Qt dependencies::
 
     sudo apt-get install python3-pyqt5
 
 If you downloaded the official package (tar.gz), you can run
-Dash Electrum from its root directory, without installing it on your
+Pion Electrum from its root directory, without installing it on your
 system; all the python dependencies are included in the 'packages'
 directory (except x16r-hash).
 
@@ -47,29 +47,29 @@ To install x16r-hash dependency in the 'packages' dir run once::
 
     pip3 install -t packages x16r-hash
 
-To run Dash Electrum from its root directory, just do::
+To run Pion Electrum from its root directory, just do::
 
     ./electrum-dash
 
-You can also install Dash Electrum on your system, by running this command::
+You can also install Pion Electrum on your system, by running this command::
 
     sudo apt-get install python3-setuptools
     pip3 install .[fast]
 
 This will download and install the Python dependencies used by
-Dash Electrum, instead of using the 'packages' directory.
+Pion Electrum, instead of using the 'packages' directory.
 The 'fast' extra contains some optional dependencies that we think
 are often useful but they are not strictly needed.
 
 If you cloned the git repository, you need to compile extra files
-before you can run Dash Electrum. Read the next section, "Development
+before you can run Pion Electrum. Read the next section, "Development
 Version".
 
 
 Using Tor proxy
 ===============
 
-Starting from Dash Electrum release 3.2.3.1 automatic Tor Proxy
+Starting from Pion Electrum release 3.2.3.1 automatic Tor Proxy
 detection and use on wallet startup is added to
 `Network <docs/tor/tor-proxy-on-startup.md>`_ preferences.
 
@@ -122,7 +122,7 @@ To create binaries, create the 'packages' directory::
 
     ./contrib/make_packages
 
-This directory contains the python dependencies used by Dash Electrum.
+This directory contains the python dependencies used by Pion Electrum.
 
 Android
 -------

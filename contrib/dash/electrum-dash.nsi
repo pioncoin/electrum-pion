@@ -7,10 +7,10 @@
 ;--------------------------------
 ;Variables
 
-  !define PRODUCT_NAME "Dash Electrum"
-  !define PRODUCT_NAME_NO_SPACE "Dash-Electrum"
+  !define PRODUCT_NAME "Pion Electrum"
+  !define PRODUCT_NAME_NO_SPACE "Pion-Electrum"
   !define PREV_PROD_NAME "Electrum-DASH"
-  !define PREV_PROD_NAME2 "Dash-Electrum"
+  !define PREV_PROD_NAME2 "Pion-Electrum"
   !define PRODUCT_WEB_SITE "https://github.com/akhavr/electrum-dash"
   !define PRODUCT_PUBLISHER "Electrum Technologies GmbH"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -210,7 +210,7 @@ SectionEnd
 
 ;--------------------------------
 ;Descriptions
-LangString DESC_DE ${LANG_ENGLISH} "Dash Electrum Wallet"
+LangString DESC_DE ${LANG_ENGLISH} "Pion Electrum Wallet"
 LangString DESC_TOR ${LANG_ENGLISH} "The Tor Project Socks Proxy"
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN

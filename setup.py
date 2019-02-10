@@ -21,7 +21,7 @@ with open('contrib/requirements/requirements-hw.txt') as f:
 version = imp.load_source('version', 'electrum_dash/version.py')
 
 if sys.version_info[:3] < (3, 4, 0):
-    sys.exit("Error: Dash Electrum requires Python version >= 3.4.0...")
+    sys.exit("Error: Pion Electrum requires Python version >= 3.4.0...")
 
 data_files = []
 
@@ -69,7 +69,7 @@ class CustomInstallCommand(install):
 
 
 setup(
-    name="Dash-Electrum",
+    name="Pion-Electrum",
     version=version.ELECTRUM_VERSION,
     install_requires=requirements,
     extras_require=extras_require,
@@ -90,12 +90,12 @@ setup(
     },
     scripts=['electrum_dash/electrum-dash'],
     data_files=data_files,
-    description="Lightweight Dashpay Wallet",
-    maintainer="akhavr",
-    maintainer_email="akhavr@khavr.com",
+    description="Lightweight Pion Wallet",
+    maintainer="pioncore",
+    maintainer_email="info@pioncoin.org",
     license="MIT License",
     url="https://electrum.dash.org",
-    long_description="""Lightweight Dashpay Wallet""",
+    long_description="""Lightweight Pion Wallet""",
     cmdclass={
         'install': CustomInstallCommand,
     },

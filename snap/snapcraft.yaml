@@ -1,8 +1,8 @@
 name: electrum-dash
 version: master
-summary: Dashpay thin client
+summary: Pion thin client
 description: |
-  Lightweight Dashpay client
+  Lightweight Pion client
 
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict
