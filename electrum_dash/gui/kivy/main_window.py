@@ -256,7 +256,7 @@ class ElectrumWindow(App):
 
         App.__init__(self)#, **kwargs)
 
-        title = _('Dash Electrum App')
+        title = _('Pion Electrum App')
         self.electrum_config = config = kwargs.get('config', None)
         self.language = config.get('language', 'en')
         self.network = network = kwargs.get('network', None)
@@ -319,7 +319,7 @@ class ElectrumWindow(App):
         if is_address(data):
             self.set_URI(data)
             return
-        if data.startswith('dash:'):
+        if data.startswith('pion:'):
             self.set_URI(data)
             return
         # try to decode transaction
@@ -474,7 +474,7 @@ class ElectrumWindow(App):
         self.fiat_unit = self.fx.ccy if self.fx.is_enabled() else ''
         # default tab
         self.switch_to('history')
-        # bind intent for dash: URI scheme
+        # bind intent for pion: URI scheme
         if platform == 'android':
             from android import activity
             from jnius import autoclass
@@ -554,7 +554,7 @@ class ElectrumWindow(App):
             else:
                 self.load_wallet(wallet)
         else:
-            Logger.debug('Dash Electrum: Wallet not found or action needed. Launching install wizard')
+            Logger.debug('Pion Electrum: Wallet not found or action needed. Launching install wizard')
 
             def launch_wizard():
                 storage = WalletStorage(path, manual_upgrades=True)
@@ -781,8 +781,8 @@ class ElectrumWindow(App):
                 from plyer import notification
             icon = (os.path.dirname(os.path.realpath(__file__))
                     + '/../../' + self.icon)
-            notification.notify('Dash Electrum', message,
-                            app_icon=icon, app_name='Dash Electrum')
+            notification.notify('Pion Electrum', message,
+                            app_icon=icon, app_name='Pion Electrum')
         except ImportError:
             Logger.Error('Notification: needs plyer; `sudo pip install plyer`')
 

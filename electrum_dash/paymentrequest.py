@@ -74,7 +74,7 @@ def get_payment_request(url):
         try:
             response = requests.request('GET', url, headers=REQUEST_HEADERS)
             response.raise_for_status()
-            # Guard against `dash:`-URIs with invalid payment request URLs
+            # Guard against `pion:`-URIs with invalid payment request URLs
             if "Content-Type" not in response.headers \
             or response.headers["Content-Type"] != "application/dash-paymentrequest":
                 data = None
@@ -266,7 +266,7 @@ class PaymentRequest:
         paymnt.transactions.append(bfh(raw_tx))
         ref_out = paymnt.refund_to.add()
         ref_out.script = util.bfh(transaction.Transaction.pay_script(TYPE_ADDRESS, refund_addr))
-        paymnt.memo = "Paid using Dash Electrum"
+        paymnt.memo = "Paid using Pion Electrum"
         pm = paymnt.SerializeToString()
         payurl = urllib.parse.urlparse(pay_det.payment_url)
         try:
