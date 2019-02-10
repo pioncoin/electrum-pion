@@ -6,11 +6,11 @@ if [[ -z $TRAVIS_TAG ]]; then
   exit 1
 fi
 
-BUILD_REPO_URL=https://github.com/akhavr/electrum-dash.git
+BUILD_REPO_URL=https://github.com/pioncoin/electrum-pion.git
 
 cd build
 
-git clone --branch $TRAVIS_TAG $BUILD_REPO_URL electrum-dash
+git clone --branch $TRAVIS_TAG $BUILD_REPO_URL electrum-pion
 
 docker run --rm \
     -v $(pwd):/opt \
@@ -23,6 +23,6 @@ sudo find . -name '*.pot' -delete
 sudo chown -R 1000 electrum-dash
 
 docker run --rm \
-    -v $(pwd)/electrum-dash:/home/buildozer/build \
+    -v $(pwd)/electrum-pion:/home/buildozer/build \
     -t zebralucky/electrum-dash-winebuild:KivyPy36 bash -c \
     'rm -rf packages && ./contrib/make_packages && ./contrib/make_apk'

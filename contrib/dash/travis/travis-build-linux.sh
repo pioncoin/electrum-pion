@@ -6,19 +6,19 @@ if [[ -z $TRAVIS_TAG ]]; then
   exit 1
 fi
 
-BUILD_REPO_URL=https://github.com/akhavr/electrum-dash.git
+BUILD_REPO_URL=https://github.com/pioncoin/electrum-pion.git
 
 cd build
 
-git clone --branch $TRAVIS_TAG $BUILD_REPO_URL electrum-dash
+git clone --branch $TRAVIS_TAG $BUILD_REPO_URL electrum-pion
 
-mkdir -p electrum-dash/dist
-wget -O electrum-dash/dist/tor-proxy-setup.exe \
+mkdir -p electrum-pion/dist
+wget -O electrum-pion/dist/tor-proxy-setup.exe \
     https://github.com/zebra-lucky/tor-proxy/releases/download/0.3.3.9/tor-proxy-0.3.3.9-setup.exe
 
 docker run --rm \
     -v $(pwd):/opt \
-    -w /opt/electrum-dash \
+    -w /opt/electrum-pion \
     -t zebralucky/electrum-dash-winebuild:Linux /opt/build_linux.sh
 
 sudo find . -name '*.po' -delete
@@ -64,6 +64,6 @@ docker run --rm \
     -e WINEPREFIX=$WINEPREFIX \
     -e PYHOME=$PYHOME \
     -v $(pwd):/opt \
-    -v $(pwd)/electrum-dash/:$WINEPREFIX/drive_c/electrum-dash \
+    -v $(pwd)/electrum-pion/:$WINEPREFIX/drive_c/electrum-dash \
     -w /opt/electrum-dash \
     -t zebralucky/electrum-dash-winebuild:WinePy36 /opt/build_wine.sh
