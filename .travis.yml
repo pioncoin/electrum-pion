@@ -26,7 +26,7 @@ matrix:
     python: "3.6"
 before_install:
 - source contrib/dash/travis/electrum_dash_version_env.sh
-- echo electrum-pion version is $DASH_ELECTRUM_VERSION
+- echo electrum-pion version is $DASH_ELECTRUM_VERSION and TRAVIS_TAG is $TRAVIS_TAG
 - mkdir -p build && cp contrib/dash/travis/* ./build/
 - if [[ -n $TRAVIS_TAG ]] && [[ $TRAVIS_OS_NAME == 'osx' ]]; then
       ./build/before_install-osx.sh;
