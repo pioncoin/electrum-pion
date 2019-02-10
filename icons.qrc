@@ -78,5 +78,11 @@
     <file>icons/radio/checked_disabled.png</file>
     <file>icons/radio/unchecked_disabled.png</file>
     <file>icons/radio/unchecked_disabled-dark.png</file>
+    <file>icons/symbol_PION_RGB_FA.png</file>
+    <file>icons/symbol-black_PION_RGB_FA.png</file>
+    <file>icons/symbol_PION_RGB_FA-with-bg.png</file>
+    <file>icons/symbol-black_PION_RGB_FA-with-bg.png</file>
+    <file>icons/logo-horizontal_PION_branding_FA.png</file>
+    <file>icons/logo-pion-horizontal.png</file>
   </qresource>
 </RCC>

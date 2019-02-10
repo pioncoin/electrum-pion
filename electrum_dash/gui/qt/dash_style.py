@@ -55,7 +55,7 @@ QGroupBox::title {
 }
 
 #main_window_nav_bar QTabBar {
-    background: url(:/icons/navlogo.png) no-repeat left top;
+    background: url(:/icons/logo-pion-horizontal.png) no-repeat left top;
 }
 
 QTabWidget#main_window_nav_bar::tab-bar {
