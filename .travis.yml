@@ -43,7 +43,7 @@ install:
   fi
 script:
 - if [[ -z $TRAVIS_TAG ]] && [[ $TRAVIS_OS_NAME == 'linux' ]];then
-      echo "Testing not set up yet. Proceed to build"
+      echo "Testing not set up yet. Proceed to build";
   fi
 - if [[ -n $TRAVIS_TAG ]] && [[ $TRAVIS_OS_NAME == 'osx' ]]; then
       ./build/travis-build-osx.sh ;
