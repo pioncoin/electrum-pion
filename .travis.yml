@@ -12,18 +12,18 @@ addons:
       - libsecp256k1-0
 matrix:
   include:
+  - if: tag =~ .+
+    os: osx
+    language: ruby
+    osx_image: xcode7.3
+  allow_failures:
   - os: linux
     python: "3.4"
   - if: NOT tag =~ .+
     os: linux
     python: "3.6"
-  allow_failures:
   - os: linux
     python: "3.5"
-  - if: tag =~ .+
-    os: osx
-    language: ruby
-    osx_image: xcode7.3
 before_install:
 - source contrib/dash/travis/electrum_dash_version_env.sh
 - echo electrum-pion version is $DASH_ELECTRUM_VERSION and TRAVIS_TAG is $TRAVIS_TAG
