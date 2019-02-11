@@ -3,7 +3,7 @@
 dash_stylesheet = """
 
 /**********************/
-/* DASH Evolution CSS */
+/* PION CSS */
 /*
 0. OSX Reset
 1. Navigation Bar
