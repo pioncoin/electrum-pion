@@ -16,12 +16,12 @@ matrix:
     os: osx
     language: ruby
     osx_image: xcode7.3
-  allow_failures:
   - os: linux
     python: "3.4"
   - if: NOT tag =~ .+
     os: linux
     python: "3.6"
+  allow_failures:
   - os: linux
     python: "3.5"
 before_install:
