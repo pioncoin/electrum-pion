@@ -137,7 +137,7 @@ class Satoshis(object):
         return self
 
     def __repr__(self):
-        return 'Duffs(%d)'%self.value
+        return 'Puffs(%d)'%self.value
 
     def __str__(self):
         return format_satoshis(self.value) + " DASH"
