@@ -51,7 +51,7 @@ base_units_list = ['PION', 'mPION', 'uPION', 'puffs']  # list(dict) does not gua
 
 
 def decimal_point_to_base_unit_name(dp: int) -> str:
-    # e.g. 8 -> "DASH"
+    # e.g. 8 -> "PION"
     try:
         return base_units_inverse[dp]
     except KeyError:
@@ -59,7 +59,7 @@ def decimal_point_to_base_unit_name(dp: int) -> str:
 
 
 def base_unit_name_to_decimal_point(unit_name: str) -> int:
-    # e.g. "DASH" -> 8
+    # e.g. "PION" -> 8
     try:
         return base_units[unit_name]
     except KeyError:
@@ -140,7 +140,7 @@ class Satoshis(object):
         return 'Puffs(%d)'%self.value
 
     def __str__(self):
-        return format_satoshis(self.value) + " DASH"
+        return format_satoshis(self.value) + " PION"
 
 class Fiat(object):
     __slots__ = ('value', 'ccy')
@@ -469,11 +469,11 @@ def user_dir():
     if 'ANDROID_DATA' in os.environ:
         return android_check_data_dir()
     elif os.name == 'posix':
-        return os.path.join(os.environ["HOME"], ".electrum-dash")
+        return os.path.join(os.environ["HOME"], ".electrum-pion")
     elif "APPDATA" in os.environ:
-        return os.path.join(os.environ["APPDATA"], "Electrum-DASH")
+        return os.path.join(os.environ["APPDATA"], "Electrum-PION")
     elif "LOCALAPPDATA" in os.environ:
-        return os.path.join(os.environ["LOCALAPPDATA"], "Electrum-DASH")
+        return os.path.join(os.environ["LOCALAPPDATA"], "Electrum-PION")
     else:
         #raise Exception("No home directory found in environment variables.")
         return
