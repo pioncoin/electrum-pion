@@ -132,7 +132,7 @@ exe = EXE(pyz,
           strip=False,
           upx=False,
           console=False,
-          icon='icons/electrum-dash.ico',
+          icon='icons/electrum-pion.ico',
           name=os.path.join('build/electrum-pion/electrum-dash', cmdline_name))
 
 # trezorctl separate bin
@@ -162,5 +162,5 @@ coll = COLLECT(exe, #tctl_exe,
 app = BUNDLE(coll,
              name=os.path.join('dist', 'Pion Electrum.app'),
              appname="Pion Electrum",
-	         icon='pion.icns',
+	         icon='electrum-pion.icns',
              version = 'ELECTRUM_VERSION')

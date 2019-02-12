@@ -39,7 +39,7 @@ if platform.system() in ['Linux', 'FreeBSD', 'DragonFly']:
         else:
             usr_share = os.path.expanduser('~/.local/share')
     data_files += [
-        (os.path.join(usr_share, 'applications/'), ['electrum-dash.desktop']),
+        (os.path.join(usr_share, 'applications/'), ['electrum-pion.desktop']),
         (os.path.join(usr_share, icons_dirname), ['icons/electrum-dash.png'])
     ]
 

@@ -1,19 +1,19 @@
 # If you want Pion Electrum to appear in a Linux app launcher ("start menu"), install this by doing:
-# sudo desktop-file-install electrum-dash.desktop
+# sudo desktop-file-install electrum-pion.desktop
 
 [Desktop Entry]
 Comment=Pion Electrum Wallet
 Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" electrum-dash %u"
 GenericName[en_US]=Pion Electrum
 GenericName=Pion Electrum
-Icon=electrum-dash
+Icon=electrum-pion
 Name[en_US]=Pion Electrum
 Name=Pion Electrum
 Categories=Network;
 StartupNotify=false
 Terminal=false
 Type=Application
-MimeType=x-scheme-handler/dashpay;
+MimeType=x-scheme-handler/pion;
 Actions=Testnet;
 
 [Desktop Action Testnet]
