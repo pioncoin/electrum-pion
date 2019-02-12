@@ -61,7 +61,7 @@ datas += collect_data_files('keepkeylib')
 
 # Add libusb so Trezor and Safe-T mini will work
 binaries = [('C:/Python36/libusb-1.0.dll', '.')]
-binaries += [('C:/x11_hash/libx11hash-0.dll', '.')]
+# binaries += [('C:/x11_hash/libx11hash-0.dll', '.')]
 binaries += [('C:/libsecp256k1/libsecp256k1.dll', '.')]
 
 # https://github.com/pyinstaller/pyinstaller/wiki/Recipe-remove-tkinter-tcl
@@ -169,4 +169,4 @@ coll = COLLECT(exe, conexe, #tctl_exe,
                a.datas,
                strip=False,
                upx=False,
-               name=os.path.join('dist', 'electrum-dash'))
+               name=os.path.join('dist', 'electrum-pion'))

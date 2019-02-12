@@ -31,8 +31,8 @@ export PYHOME=$WINEPREFIX/drive_c/Python36
 wget https://github.com/zebra-lucky/zbarw/releases/download/20180620/zbarw-zbarcam-0.10-win32.zip
 unzip zbarw-zbarcam-0.10-win32.zip && rm zbarw-zbarcam-0.10-win32.zip
 
-wget https://github.com/zebra-lucky/x11_hash/releases/download/1.4.1/x11_hash-1.4.1-win32.zip
-unzip x11_hash-1.4.1-win32.zip && rm x11_hash-1.4.1-win32.zip
+# wget https://github.com/zebra-lucky/x11_hash/releases/download/1.4.1/x11_hash-1.4.1-win32.zip
+# unzip x11_hash-1.4.1-win32.zip && rm x11_hash-1.4.1-win32.zip
 
 wget https://github.com/zebra-lucky/secp256k1/releases/download/0.1/libsecp256k1-0.1-win32.zip
 unzip libsecp256k1-0.1-win32.zip && rm libsecp256k1-0.1-win32.zip
@@ -42,8 +42,8 @@ docker run --rm \
     -e WINEPREFIX=$WINEPREFIX \
     -e PYHOME=$PYHOME \
     -v $(pwd):/opt \
-    -v $(pwd)/electrum-dash/:$WINEPREFIX/drive_c/electrum-dash \
-    -w /opt/electrum-dash \
+    -v $(pwd)/electrum-pion/:$WINEPREFIX/drive_c/electrum-pion \
+    -w /opt/electrum-pion \
     -t zebralucky/electrum-dash-winebuild:WinePy36 /opt/build_wine.sh
 
 export WINEARCH=win64
@@ -53,8 +53,8 @@ export PYHOME=$WINEPREFIX/drive_c/Python36
 wget https://github.com/zebra-lucky/zbarw/releases/download/20180620/zbarw-zbarcam-0.10-win64.zip
 unzip zbarw-zbarcam-0.10-win64.zip && rm zbarw-zbarcam-0.10-win64.zip
 
-wget https://github.com/zebra-lucky/x11_hash/releases/download/1.4.1/x11_hash-1.4.1-win64.zip
-unzip x11_hash-1.4.1-win64.zip && rm x11_hash-1.4.1-win64.zip
+# wget https://github.com/zebra-lucky/x11_hash/releases/download/1.4.1/x11_hash-1.4.1-win64.zip
+# unzip x11_hash-1.4.1-win64.zip && rm x11_hash-1.4.1-win64.zip
 
 wget https://github.com/zebra-lucky/secp256k1/releases/download/0.1/libsecp256k1-0.1-win64.zip
 unzip libsecp256k1-0.1-win64.zip && rm libsecp256k1-0.1-win64.zip
@@ -64,6 +64,6 @@ docker run --rm \
     -e WINEPREFIX=$WINEPREFIX \
     -e PYHOME=$PYHOME \
     -v $(pwd):/opt \
-    -v $(pwd)/electrum-pion/:$WINEPREFIX/drive_c/electrum-dash \
-    -w /opt/electrum-dash \
+    -v $(pwd)/electrum-pion/:$WINEPREFIX/drive_c/electrum-pion \
+    -w /opt/electrum-pion \
     -t zebralucky/electrum-dash-winebuild:WinePy36 /opt/build_wine.sh

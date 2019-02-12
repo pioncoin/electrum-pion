@@ -10,3 +10,4 @@ PySocks==1.6.7
 qrcode==5.3
 requests==2.18.4
 six==1.11.0
+x16r_hash==1.0.1
